@@ -1,0 +1,33 @@
+dag {
+bb="0,0,1,1"
+"auxiliary respiratory health vars" [adjusted,pos="0.614,0.856"]
+ICS_use [exposure,pos="0.512,0.699"]
+IMD [adjusted,pos="0.374,0.072"]
+LF [outcome,pos="0.804,0.702"]
+M_IMD [pos="0.864,0.074"]
+M_LF [pos="0.869,0.292"]
+M_ethnicity [pos="0.856,0.206"]
+asthma [adjusted,pos="0.302,0.581"]
+ethnicity [adjusted,pos="0.328,0.121"]
+sex [adjusted,pos="0.275,0.447"]
+"auxiliary respiratory health vars" -> ICS_use
+"auxiliary respiratory health vars" -> LF
+"auxiliary respiratory health vars" -> M_LF
+ICS_use -> LF
+ICS_use -> M_LF
+IMD -> ICS_use
+IMD -> LF
+IMD -> M_IMD
+IMD -> M_LF
+IMD -> M_ethnicity
+LF -> M_LF
+asthma -> ICS_use
+asthma -> LF
+ethnicity -> ICS_use
+ethnicity -> LF
+ethnicity -> M_LF
+ethnicity -> M_ethnicity
+sex -> ICS_use
+sex -> LF
+sex -> M_LF
+}

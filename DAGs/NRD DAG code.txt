@@ -1,0 +1,31 @@
+dag {
+bb="0,0,1,1"
+IMD [adjusted,pos="0.532,0.045"]
+LF [outcome,pos="0.609,0.574"]
+M_IMD [pos="0.865,0.073"]
+M_LF [pos="0.846,0.586"]
+M_ethnicity [pos="0.866,0.164"]
+NRD [exposure,pos="0.453,0.575"]
+birthweight [adjusted,pos="0.161,0.440"]
+ethnicity [adjusted,pos="0.486,0.110"]
+prematurity [adjusted,pos="0.161,0.320"]
+sex [adjusted,pos="0.438,0.207"]
+IMD -> LF
+IMD -> M_IMD
+IMD -> M_LF
+IMD -> M_ethnicity
+IMD -> NRD
+LF -> M_LF
+NRD -> LF
+birthweight -> LF
+birthweight -> NRD
+ethnicity -> LF
+ethnicity -> M_LF
+ethnicity -> M_ethnicity
+ethnicity -> NRD
+prematurity -> LF
+prematurity -> NRD
+sex -> LF
+sex -> M_LF
+sex -> NRD
+}

@@ -1,0 +1,52 @@
+dag {
+bb="0,0,1,1"
+"auxiliary respiratory information" [adjusted,pos="0.588,0.770"]
+"parental smoking" [adjusted,pos="0.265,0.121"]
+BMI [adjusted,pos="0.151,0.383"]
+IMD [adjusted,pos="0.233,0.208"]
+LF [outcome,pos="0.661,0.523"]
+LTRI [exposure,pos="0.449,0.522"]
+M_BMI [pos="0.941,0.396"]
+M_IMD [pos="0.969,0.630"]
+M_LF [pos="0.867,0.541"]
+M_ethnicity [pos="0.915,0.147"]
+M_smoking [pos="0.929,0.313"]
+bronchiectasis [adjusted,pos="0.200,0.733"]
+ethnicity [adjusted,pos="0.305,0.063"]
+neurodisablity [adjusted,pos="0.243,0.842"]
+prematurity [adjusted,pos="0.277,0.882"]
+scoliosis [adjusted,pos="0.222,0.789"]
+sex [adjusted,pos="0.332,0.898"]
+"auxiliary respiratory information" -> LF
+"auxiliary respiratory information" -> M_LF
+"parental smoking" -> LF
+"parental smoking" -> LTRI
+"parental smoking" -> M_smoking
+BMI -> LF
+BMI -> LTRI
+IMD -> LF
+IMD -> LTRI
+IMD -> M_BMI
+IMD -> M_LF
+IMD -> M_ethnicity
+IMD -> M_smoking
+LF -> M_LF
+LTRI -> LF
+bronchiectasis -> LF
+bronchiectasis -> LTRI
+ethnicity -> LF
+ethnicity -> LTRI
+ethnicity -> M_LF
+ethnicity -> M_ethnicity
+neurodisablity -> LF
+neurodisablity -> LTRI
+prematurity -> LF
+prematurity -> LTRI
+scoliosis -> LF
+scoliosis -> LTRI
+sex -> LF
+sex -> LTRI
+sex -> M_BMI
+sex -> M_LF
+}
+

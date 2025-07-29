@@ -1,0 +1,57 @@
+dag {
+bb="0,0,1,1"
+"air pollution" [adjusted,pos="0.229,0.900"]
+"auxiliary respiratory health vars" [pos="0.593,0.876"]
+"location of residence" [latent,pos="0.062,0.175"]
+"parental smoking" [adjusted,pos="0.184,0.302"]
+"prenatal smoking" [adjusted,pos="0.278,0.312"]
+BMI [adjusted,pos="0.299,0.927"]
+IMD [adjusted,pos="0.210,0.137"]
+LF [outcome,pos="0.807,0.685"]
+M_BMI [pos="0.777,0.021"]
+M_IMD [pos="0.955,0.489"]
+M_LF [pos="0.869,0.292"]
+M_air_pollution [pos="0.961,0.583"]
+M_ethnicity [pos="0.856,0.206"]
+M_parental_smoking [pos="0.858,0.125"]
+M_prenatal_smoking [pos="0.850,0.058"]
+asthma [exposure,pos="0.512,0.699"]
+ethnicity [adjusted,pos="0.257,0.202"]
+sex [adjusted,pos="0.299,0.580"]
+"air pollution" -> LF
+"air pollution" -> asthma
+"auxiliary respiratory health vars" -> LF
+"auxiliary respiratory health vars" -> M_LF
+"location of residence" -> "air pollution"
+"location of residence" -> IMD
+"parental smoking" -> LF
+"parental smoking" -> M_parental_smoking
+"parental smoking" -> asthma
+"prenatal smoking" -> LF
+"prenatal smoking" -> M_parental_smoking
+"prenatal smoking" -> M_prenatal_smoking
+"prenatal smoking" -> asthma
+BMI -> LF
+BMI -> asthma
+IMD -> "parental smoking"
+IMD -> "prenatal smoking"
+IMD -> BMI
+IMD -> LF
+IMD -> M_BMI
+IMD -> M_LF
+IMD -> M_ethnicity
+IMD -> M_parental_smoking
+IMD -> M_prenatal_smoking
+IMD -> asthma
+LF -> M_LF
+asthma -> LF
+asthma -> M_LF
+ethnicity -> LF
+ethnicity -> M_LF
+ethnicity -> M_ethnicity
+ethnicity -> asthma
+sex -> LF
+sex -> M_BMI
+sex -> M_LF
+sex -> asthma
+}

@@ -1,0 +1,2 @@
+# DAG code
+The .txt files in this folder contain code that can be entered into the Model code box of [DAGgity](https://www.dagitty.net/) to create directed acyclic graphs (DAGs). These missingness-DAGs (DAGs that additionally include nodes for response/missingness indicators for each variable) were used to guide the choice of imputation models and subsamples of complete variables according to the algorithm presented [here](https://arxiv.org/abs/2503.24035). 
